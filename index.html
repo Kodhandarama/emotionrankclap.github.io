@@ -2,60 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>EmotionRankCLAP</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 3rem;
-      background-color: #f9f9f9;
-      line-height: 1.6;
-    }
-    h1 {
-      color: #2c3e50;
-      font-size: 1.8em;
-    }
-    img {
-        max-width: 600px;   /* limits maximum width */
-        width: 100%;        /* responsive: will shrink on smaller screens */
-        height: auto;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background: white;
-        padding: 5px;
-        margin-top: 20px;
-        margin-bottom: 30px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .links {
-      margin-top: 20px;
-      font-size: 1.1em;
-    }
-    .links a {
-      display: block;
-      margin: 10px 0;
-      color: #0066cc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmotionRankCLAP | Interspeech 2025</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#abstract">Abstract</a></li>
+        <li><a href="#contributions">Contributions</a></li>
+        <li><a href="#method">Method</a></li>
+        <li><a href="#experiments">Experiments</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>EmotionRankCLAP</h1>
+    <p>Bridging Natural Language Speaking Styles and Ordinal Speech Emotion via Rank-N-Contrast</p>
+  </header>
 
-  <h1>EmotionRankCLAP: Bridging Natural Language Speaking Styles and Ordinal Speech Emotion via Rank-N-Contrast</h1>
+  <section id="resources">
+    <h2>Resources</h2>
+    <ul class="resources-list">
+      <li>
+        <a href="https://github.com/kodhandarama/emotionrankclap">
+          <img src="assets/github_logo.png" alt="GitHub" class="logo"> View Code on GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/kodhandarama/emotionrankclap/releases/download/v1.0/EmotionRankCLAP_dataset.zip">
+          <img src="assets/download_download.png" alt="Download Data" class="logo"> Download Dataset
+        </a>
+      </li>
+    </ul>
+  </section>
 
-  <img src="assets/image_rnc.png" alt="Rank-N-Contrast Illustration">
+  <section id="about">
+    <h2>About the Paper</h2>
+    <p>This work introduces <strong>EmotionRankCLAP</strong>, a supervised contrastive learning framework that aligns emotional speech with natural language speaking style descriptions, leveraging the ordinal nature of emotions via a novel Rank-N-Contrast objective.</p>
+  </section>
 
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <p>Current emotion-based <em>contrastive language-audio pretraining</em> (CLAP) methods typically learn by naïvely aligning audio samples with corresponding text prompts. Consequently, this approach fails to capture the ordinal nature of emotions, hindering inter-emotion understanding and often resulting in a wide modality gap between the audio and text embeddings due to insufficient alignment. To handle these drawbacks, we introduce EmotionRankCLAP, a supervised contrastive learning approach that uses dimensional attributes of emotional speech and natural language prompts to jointly capture fine-grained emotion variations and improve cross-modal alignment. Our approach utilizes a Rank-N-Contrast objective to learn ordered relationships by contrasting samples based on their rankings in the valence-arousal space. EmotionRankCLAP outperforms existing emotion-CLAP methods in modeling emotion ordinality across modalities, measured via a cross-modal retrieval task.</p>
+  </section>
 
+  <section id="contributions">
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Leveraging the ordinal nature of emotions to learn fine-grained emotion embeddings using <em>Rank-N-Contrast</em>.</li>
+      <li>Demonstrating improved cross-modal alignment by reducing the modality gap between audio and text embeddings.</li>
+      <li>Designing a cross-modal retrieval task to evaluate ordinal consistency, achieving state-of-the-art results on valence and arousal retrieval.</li>
+      <li>Releasing LLM-generated natural-language speaking style descriptions from the MSP-Podcast corpus to bridge modalities.</li>
+    </ul>
+  </section>
 
-  <div class="links">
-    🔗 <a href="https://example.com/emotionrankclap_data.zip" target="_blank">Download Dataset (ZIP)</a>
-    🔗 <a href="https://github.com/kodhandarama/emotionrankclap" target="_blank">View Code on GitHub</a>
-  </div>
+  <section id="method">
+    <h2>Method Overview</h2>
+    <p>The pipeline consists of:</p>
+    <ol>
+      <li><strong>Encoding</strong>: Extract audio embeddings via a frozen WavLM-based SER model and text embeddings via DistilRoBERTa.</li>
+      <li><strong>Projection</strong>: Map both embeddings to a 512-dimensional shared space.</li>
+      <li><strong>Rank-N-Contrast</strong>: Apply a cross-modal loss that ranks positive and negative pairs based on valence-arousal distance.</li>
+      <li><strong>Caption Generation</strong>: Use an LLM prompt to produce natural language style descriptions for training.</li>
+    </ol>
+  </section>
 
+  <section id="experiments">
+    <h2>Experiments & Results</h2>
+    <h3>Cross-modal Alignment</h3>
+    <p>EmotionRankCLAP achieves the lowest MMD (0.087) and Wasserstein distance (0.065), outperforming SCE and SupCon baselines.</p>
+    <h3>Ordinal Consistency</h3>
+    <p>On cross-modal retrieval tasks, EmotionRankCLAP reaches Kendall&#8217;s Tau of 0.616 for valence and 0.552 for arousal, marking significant gains over prior methods.</p>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact & Links</h2>
+    <ul>
+      <li>Authors: Shreeram Suresh Chandra, Lucas Goncalves, Junchen Lu, Carlos Busso, Berrak Sisman</li>
+      <li>Email: <a href="mailto:shreeramsureshchandra@gmail.com">shreeramsureshchandra@gmail.com</a></li>
+      <li>Additional Contacts: busso@cmu.edu, sisman@jhu.edu</li>
+      <li>Paper PDF: <a href="EmoRankCLAP_Shreeram_Interspeech2025.pdf">Download</a></li>
+      <li>Project page: <a href="https://kodhandarama.github.io/emotionrankclap.github.io/">GitHub Pages</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
