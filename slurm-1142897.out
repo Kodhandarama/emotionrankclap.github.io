@@ -1,0 +1,88 @@
+/var/spool/slurmd/job1142897/slurm_script: line 3: ::: command not found
+Job running on node: c08
+CPU info:
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        46 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               24
+On-line CPU(s) list:                  0-23
+Vendor ID:                            GenuineIntel
+Model name:                           Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+CPU family:                           6
+Model:                                63
+Thread(s) per core:                   2
+Core(s) per socket:                   6
+Socket(s):                            2
+Stepping:                             2
+CPU max MHz:                          3200.0000
+CPU min MHz:                          1200.0000
+BogoMIPS:                             4794.38
+Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts md_clear flush_l1d
+Virtualization:                       VT-x
+L1d cache:                            384 KiB (12 instances)
+L1i cache:                            384 KiB (12 instances)
+L2 cache:                             3 MiB (12 instances)
+L3 cache:                             30 MiB (2 instances)
+NUMA node(s):                         2
+NUMA node0 CPU(s):                    0,2,4,6,8,10,12,14,16,18,20,22
+NUMA node1 CPU(s):                    1,3,5,7,9,11,13,15,17,19,21,23
+Vulnerability Gather data sampling:   Not affected
+Vulnerability Itlb multihit:          KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                   Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
+Vulnerability Mds:                    Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Meltdown:               Mitigation; PTI
+Vulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling: Not affected
+Vulnerability Retbleed:               Not affected
+Vulnerability Spec rstack overflow:   Not affected
+Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                  Not affected
+Vulnerability Tsx async abort:        Not affected
+Memory info:
+               total        used        free      shared  buff/cache   available
+Mem:            62Gi        41Gi       4.0Gi       304Mi        17Gi        20Gi
+Swap:          8.0Gi       8.0Gi       0.0Ki
+GPU info (if available):
+No devices were found
+No GPU available
+conda 25.1.1
+c08
+Active Python environment: bci
+/home/schand30/miniconda3/envs/bci/bin/python
+Python 3.9.21
+Launching Jupyter on c08:8888
+[I 2025-05-28 16:14:39.700 ServerApp] Extension package jupyter_lsp took 0.2741s to import
+[I 2025-05-28 16:14:39.820 ServerApp] Extension package jupyter_server_terminals took 0.1197s to import
+[I 2025-05-28 16:14:43.114 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2025-05-28 16:14:43.125 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2025-05-28 16:14:43.138 ServerApp] jupyterlab | extension was successfully linked.
+[I 2025-05-28 16:14:43.150 ServerApp] notebook | extension was successfully linked.
+[I 2025-05-28 16:14:43.153 ServerApp] Writing Jupyter server cookie secret to /home/schand30/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2025-05-28 16:14:47.037 ServerApp] notebook_shim | extension was successfully linked.
+[I 2025-05-28 16:14:47.396 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2025-05-28 16:14:47.404 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2025-05-28 16:14:47.406 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2025-05-28 16:14:47.557 LabApp] JupyterLab extension loaded from /home/schand30/miniconda3/envs/bci/lib/python3.9/site-packages/jupyterlab
+[I 2025-05-28 16:14:47.557 LabApp] JupyterLab application directory is /home/schand30/miniconda3/envs/bci/share/jupyter/lab
+[I 2025-05-28 16:14:47.558 LabApp] Extension Manager is 'pypi'.
+[I 2025-05-28 16:14:47.842 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2025-05-28 16:14:47.848 ServerApp] notebook | extension was successfully loaded.
+[I 2025-05-28 16:14:47.849 ServerApp] Serving notebooks from local directory: /export/fs05/schand30/code/emotionrankclap_website/emotionrankclap.github.io
+[I 2025-05-28 16:14:47.849 ServerApp] Jupyter Server 2.15.0 is running at:
+[I 2025-05-28 16:14:47.849 ServerApp] http://c08:8888/tree?token=01d5a6808a67cf15efa5715971d1ddc65152cc61c5febf1d
+[I 2025-05-28 16:14:47.849 ServerApp]     http://127.0.0.1:8888/tree?token=01d5a6808a67cf15efa5715971d1ddc65152cc61c5febf1d
+[I 2025-05-28 16:14:47.849 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2025-05-28 16:14:47.868 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/schand30/.local/share/jupyter/runtime/jpserver-422185-open.html
+    Or copy and paste one of these URLs:
+        http://c08:8888/tree?token=01d5a6808a67cf15efa5715971d1ddc65152cc61c5febf1d
+        http://127.0.0.1:8888/tree?token=01d5a6808a67cf15efa5715971d1ddc65152cc61c5febf1d
+[I 2025-05-28 16:14:47.950 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2025-05-28 16:41:32.371 ServerApp] 302 GET /?token=[secret] (@192.168.51.158) 1.10ms
+[I 2025-05-28 16:42:41.362 ServerApp] 302 GET /?token=[secret] (@192.168.51.158) 0.77ms
+slurmstepd-c08: error: *** JOB 1142897 ON c08 CANCELLED AT 2025-05-28T16:43:55 ***
